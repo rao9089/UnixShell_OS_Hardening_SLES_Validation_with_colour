@@ -1,0 +1,75 @@
+<p style='color: green;'>This VM host resides in Azure cloud .. </p>
+<p style='color: green;'>OS Name and Version is "SUSE Linux Enterprise Server 15 SP4" </p>
+<p style='color: red;'> Swapspace is not configured. Please configure swapspace FS as performance will slow down  and might gets hang. Impossible to work on the system for several minutes. Thumbsrule - size for Swapspace partition should be  3 times of RAM configured .  </p>
+ <span style='color: blue;'>
+--------------------------CIS 1.0 Initail Setup ---------------------------------------------------------------------------</p>
+
+<p style='color: red;'>CIS 1.1.1.1 disable and unload unused squashfs filesystem  </p>
+<p style='color: red;'>CIS 1.1.1.2 disable and unload unused udf filesystem  </p>
+<p style='color: red;'>disable and unload fat  filesystem - CIS 1.1.1.3 </p>
+<p style='color: red;'>disable and unload vfat  filesystem - CIS 1.1.1.3 </p>
+<p style='color: red;'>disable and unload msdos  filesystem - CIS 1.1.1.3 </p>
+<p style='color: red;'>CIS 1.1.2 to CIS 1.1.5 - Recommend to create partition for /tmp filesystem and setnosuid,noexec and nodev attributes for /tmp filesystem. Ensure that FS type tmpfs should not be defined for /tmp mountpoint </p>
+<p style='color: red;'>CIS 1.1.3 noexec mount option for /tmp not added in /etc/fstab </p>
+<p style='color: red;'>CIS 1.1.4 nodev mount option for /tmp not added in /etc/fstab </p>
+<p style='color: red;'>CIS 1.1.5 nosuid mount option for /tmp not added in /etc/fstab </p>
+<p style='color: green;'>CIS - 1.1.6 to CIS 1.1.9  /dev/shm already mounted </p>
+<p style='color: red;'>CIS 1.1.7 noexec mount option for /dev/shm not added in /etc/fstab </p>
+<p style='color: green;'>CIS 1.1.8 nodev mount option for /dev/shm already present in /etc/fstab </p>
+<p style='color: green;'>CIS 1.1.9 nosuid mount option for /dev/shm already present in /etc/fstab </p>
+<p style='color: red;'>CIS 1.1.10 For new installations, during installation create a custom partition setup and specify a separate partition for /var  </p>
+<p style='color: red;'>Also  '/var /dev/<sdb>  ext4 rw,relatime,seclabel,data=ordered' to be maintained in the /etc/fstab file and then remount </p>
+<p style='color: red;'>CIS 1.1.11 /var/tmp FS not exists </p>
+<p style='color: red;'>CIS 1.1.12 noexec mount option for /var/tmp not added in /etc/fstab </p>
+<p style='color: red;'>CIS 1.1.13 nodev mount option for /var/tmp not added in /etc/fstab </p>
+<p style='color: red;'>CIS 1.1.14 nosuid mount option for /var/tmp not added in /etc/fstab </p>
+<p style='color: red;'> CIS 1.1.15  /var/log filesystem not exists  </p>
+<p style='color: red;'>CSI 1.1.16  /var/log/audit filesystem not exists  </p>
+
+ CIS 1.1.17   /home filesystem not exists.   </p>
+<p style='color: red;'>CIS 1.1.18 nodev mount option for /home not added in /etc/fstab </p>
+
+ CIS 1.1.19, 1.1.20 and 1.1.21 This cannot be checked validation  as we need to execute this manually. SO ignore this section </p>
+
+ CIS 1.22 Run the following command to verify no world writable directories exist without the sticky bit set:
+<p style='color: green;'>1.1.22 if  sticky bit is already  set on all world-writable as listed above>' </p>
+<p style='color: green;'>CIS 1.1.23 Automatic mounting of devices such as CD. DVD, USB drives  is disabled</p>
+<p style='color: red;'>CIS 1.2.1 No need to Update package manager GPG keys  </p>
+
+ CIS 1.2.2  Ensure package manager repositories are configured . Run the  following command to verify repositories are configured correctly 'zypper repos' </p>
+<p style='color: red;'>CIS 1.2.3 'gpgcheck' is not set to 1. Edit /etc/zypp/zypp.conf and set 'gpgcheck=1' in the [main] section </p>
+<p style='color: green;'>CIS 1.3.1 sudo ialready installed. No action required  </p>
+<p style='color: red;'>CIS 1.3.2 entry 'Defaults use_pty' not maintained in /etc/sudoers file. iRecommend to  add the entry ''Defaults use_pty' in the /etc/sudoers file. </p>
+<p style='color: red;'>CIS 1.3.3 entry 'Defaults logfile=/var/log/sudo.log' not not maintained in /etc/sudoers file. iRecommend to  add the entry ''Defaults use_pty' in the /etc/sudoers file. </p>
+<p style='color: red;'>CIS 1.4.1 AIDE is not installed. Install AIDE  and then initialize AIDE. </p>
+<p style='color: red;'>CIS 1.4.2  no crontab for root defined  </p>
+<p style='color: red;'>CIS 1.4.2  aidecheck.service is not enabled. Enable aidecheck.service </p>
+<p style='color: red;'>CIS 1.4.2  aidecheck.timer  is not enabled. Enable aidecheck.timer  </p>
+<p style='color: red;'>CIS 1.5.1 bootloader set superuser and password is not set.  </p>
+<p style='color: green;'>CIS 1.5.3 Entry 'ExecStart=-/usr/lib/systemd/systemd-sulogin-shell rescue' already added  in /usr/lib/systemd/system/rescue.service file. </p>
+<p style='color: green;'>CIS 1.5.3 Entry 'ExecStart=-/usr/lib/systemd/systemd-sulogin-shell emergency' already added  in /usr/lib/systemd/system/emergency.service file. </p>
+<p style='color: green;'>CIS 1.6.1 entry 'fs.suid_dumpable = 0' already added in /etc/sysctl.conf or a /etc/sysctl.d/* file' </p>
+<p style='color: red;'>CIS 1.6.1 systemd-coredump is not installed and  not enabled. Install systemd-coredump and then add Storage=none and ProcessSizeMax=0 in /etc/systemd/coredump.conf </p>
+<p style='color: green;'>CIS 1.6.2  kernel has identified and activated NX/XD protection. No action required for 64 bit processors 
+ 
+<p style='color: green;'>kernel.randomize_va_space is already present and activated in kernel parameter </p>
+<p style='color: green;'>CIS 1.6.4 Package prelink is not installed -  CIS 1.6.4 </p>
+<p style='color: red;'> CIS 1.7.1 apparmor package not installed. Install apparmor package using zypper command   </p>
+<p style='color: green;'>CIS 1.7.1.2 AppArmor is enabled at boot time in your bootloader configuration. No Action required </p>
+<p style='color: red;'>CIS 1.8.1  Information present in /etc/motd if they display operating system information: \m - machine architecture  - operating system release \s - operating system name  - operating system version etc </p>
+
+ CIS 1.8.1 if machine type RAM memory value, OS release vesrion shown in the output of grep command as shown above ,please remove entry line in /etc/motd </p>
+<p style='color: red;'>CIS 1.8.1.1.2 if machine type RAM memory value, OS release vesrion present in the /etc/issue , remove all entry lines in /etc/issue </p>
+<p style='color: red;'>CIS 1.8.1.3 /etc/issue.net file is not present </p>
+<p style='color: green;'> CIS 1.8.1.4 - permissions for /etc/motd is 644. No action required. n
+<p style='color: green;'> CIS 1.8.1.4 - Ownership  for /etc/motd is root. No action required. n
+<p style='color: green;'> CIS 1.8.1.4 - Group  for /etc/motd is root. No action required. n
+<p style='color: red;'>CIS 1.8.1.5 - permissions for /etc/issue is not 644. change the permission to 644 </p>
+<p style='color: green;'> CIS 1.8.1.5 - Ownership  for /etc/issue is root. No action required. n
+<p style='color: green;'> CIS 1.8.1.5 - Group  for /etc/issue is root. No action required. n
+<p style='color: red;'>CIS 1.8.1.6 /etc/issue.net file is not present </p>
+<p style='color: red;'>updates are available. Perform latest update </p>
+<p style='color: green;'> CIS 1.10  - gdm software is not installed. </p>
+<p style='color: green;'>-------------------------------------End of  CIS 1.0-----------------------------------------------------------</p>
+<p style='color: green;'> Version of the validation OS Shell script file name CIS_1_0.sh is 1.0 and latest version date is 13-02-2024 </p>
+<p style='color: green;'> Version of the validation OS Shell script file name CIS_4_0.sh is 1.0 and latest version date is 13-02-2024 </p>

@@ -1,0 +1,256 @@
+ <span style='color: blue;'>
+--------------------------CIS 6.0 System Maintenance ---------------------------------------------------------------------------</p>
+
+<p style='color: red;'> CIS 6.1.1 - This is Manual activity.  ignore  </p>
+<p style='color: green;'>CIS 6.1.2 permission for /etc/password correctly   set to 644 </p>
+<p style='color: green;'>CIS 6.1.2 ownership for /etc/password correctly   set to root </p>
+<p style='color: green;'>CIS 6.1.2 Group for /etc/password correctly   set to root </p>
+<p style='color: green;'>CIS 6.1.3 permission for /etc/shadow correctly   set to 640 </p>
+<p style='color: green;'>CIS 6.1.3 Ownership for /etc/shadow correctly   set to root </p>
+<p style='color: red;'>CIS 6.1.3 Group for /etc/shadow not  set to non-root </p>
+<p style='color: green;'>CIS 6.1.4 permission for /etc/group correctly   set to 644 </p>
+<p style='color: green;'>CIS 6.1.4 Ownership for /etc/group correctly   set to root </p>
+<p style='color: green;'>CIS 6.1.4 Group for /etc/group correctly   set to root </p>
+<p style='color: green;'>CIS 6.1.5 permission for /etc/password- correctly   set to 644 </p>
+<p style='color: green;'>CIS 6.1.5 ownership for /etc/password- correctly   set to root </p>
+<p style='color: green;'>CIS 6.1.5 Group for /etc/password- correctly   set to root </p>
+<p style='color: green;'>CIS 6.1.6 permission for /etc/shadow- correctly   set to 640 </p>
+<p style='color: green;'>CIS 6.1.6 Ownership for /etc/shadow- correctly   set to root </p>
+<p style='color: red;'>CIS 6.1.6 Group for /etc/shadow not  set to non-root </p>
+<p style='color: green;'>CIS 6.1.7 permission for /etc/group- correctly   set to 644 </p>
+<p style='color: green;'>CIS 6.1.7 Ownership for /etc/group- correctly   set to root </p>
+<p style='color: green;'>CIS 6.1.7 Group for /etc/group- correctly   set to root </p>
+
+ CIS 6.1.8 verify no files are returned. If following files are retured then Removing write access for the other category ( chmod o-w <filename> ) is advisable </p>
+<p style='color: green;'>CIS 6.1.8 world writables files not exists </p>
+
+ CIS 6.1.9 verify no list of unknown users files are returned. If following files are retured then change the ownership or user using command chown </p>
+<p style='color: green;'>CIS 6.1.9 unknown users files are not listed  </p>
+
+ CIS 6.1.10 verify no list of unknown group files are returned. If following files are retured then change the ownership or user using command chown </p>
+<p style='color: green;'>CIS 6.1.10 unknown group files are not listed  </p>
+
+ CIS 6.1.11 verify no list of SUID  files are returned. If following files are retured then change then review the permission of the following files   </p>
+/sbin/mount.nfs
+/sbin/unix2_chkpwd
+/sbin/unix_chkpwd
+/usr/bin/at
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/crontab
+/usr/bin/expiry
+/usr/bin/gpasswd
+/usr/bin/mount
+/usr/bin/newgidmap
+/usr/bin/newgrp
+/usr/bin/newuidmap
+/usr/bin/passwd
+/usr/bin/pkexec
+/usr/bin/su
+/usr/bin/sudo
+/usr/bin/umount
+/usr/lib/dbus-1/dbus-daemon-launch-helper
+/usr/lib/polkit-1/polkit-agent-helper-1
+<p style='color: red;'>CIS 6.1.11 list of SUID files are returned or listed. If following files are listed then change the SUID   </p>
+
+ CIS 6.1.12 verify no list of SGID  files are returned. If following files are retured then change then review the permission of the following files   </p>
+/usr/bin/chage
+/usr/bin/wall
+/usr/bin/write
+/usr/lib/utempter/utempter
+/usr/sbin/lockdev
+<p style='color: red;'>CIS 6.1.12 list of SGID files are returned or listed. If following files are listed then change the SGID   </p>
+
+ CIS 6.2.1 List the following users that does not have x in /etc/passwd    </p>
+<p style='color: green;'>CIS 6.2.1 no list of accounts in /etc/passwd  </p>
+
+  6.2.2 run the command  user does  not have a password 
+ 
+<p style='color: green;'>CIS 6.2.2 no list of accounts in /etc/passwd  </p>
+
+ 6.2.3  run the command  ensure root is the only UID 0 account 
+ 
+<p style='color: green;'>CIS 6.2.3 compliance as the output returned root  </p>
+
+   6.2.4 run the following command to verify that no results are returned </p>
+<p style='color: green;'>6.2.4 No Empty directory exists in Path </p>
+<p style='color: green;'>6.2.4 No Trailing ':' present in PATH
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'> 6.2.5 No results are returned. </p>
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/root) of user root
+<p style='color: green;'>6.2.6 No Other Read permission set on the home directory (/root) of user root
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/root) of user root
+<p style='color: green;'>6.2.6 No Other Execute permission set on the home directory (/root) of user root
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/run/dbus) of user messagebus
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/run/dbus) of user messagebus
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/run/dbus) of user messagebus
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/run/dbus) of user messagebus
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/) of user systemd-network
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/) of user systemd-network
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/) of user systemd-network
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/) of user systemd-network
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/) of user systemd-timesync
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/) of user systemd-timesync
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/) of user systemd-timesync
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/) of user systemd-timesync
+<p style='color: red;'>6.2.6 Group Write permission set on the home directory (/var/spool/atjobs) of user at
+<p style='color: green;'>6.2.6 No Other Read permission set on the home directory (/var/spool/atjobs) of user at
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/var/spool/atjobs) of user at
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/var/spool/atjobs) of user at
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/var/lib/nobody) of user nobody
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/var/lib/nobody) of user nobody
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/var/lib/nobody) of user nobody
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/var/lib/nobody) of user nobody
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/var/lib/empty) of user man
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/var/lib/empty) of user man
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/var/lib/empty) of user man
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/var/lib/empty) of user man
+<p style='color: red;'>6.2.6 Group Write permission set on the home directory (/var/spool/clientmqueue) of user mail
+<p style='color: green;'>6.2.6 No Other Read permission set on the home directory (/var/spool/clientmqueue) of user mail
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/var/spool/clientmqueue) of user mail
+<p style='color: green;'>6.2.6 No Other Execute permission set on the home directory (/var/spool/clientmqueue) of user mail
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/var/spool/lpd) of user lp
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/var/spool/lpd) of user lp
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/var/spool/lpd) of user lp
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/var/spool/lpd) of user lp
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/var/lib/chrony) of user chrony
+<p style='color: green;'>6.2.6 No Other Read permission set on the home directory (/var/lib/chrony) of user chrony
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/var/lib/chrony) of user chrony
+<p style='color: green;'>6.2.6 No Other Execute permission set on the home directory (/var/lib/chrony) of user chrony
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/var/lib/sshd) of user sshd
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/var/lib/sshd) of user sshd
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/var/lib/sshd) of user sshd
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/var/lib/sshd) of user sshd
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/) of user dockremap
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/) of user dockremap
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/) of user dockremap
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/) of user dockremap
+<p style='color: green;'>6.2.6 No Group Write permission set on the home directory (/home/azureadmin) of user azureadmin
+<p style='color: red;'>6.2.6 Other Read permission set on the home directory (/home/azureadmin) of user azureadmin
+<p style='color: green;'>6.2.6 No Other Write permission set on the home directory (/home/azureadmin) of user azureadmin
+<p style='color: red;'>6.2.6 Other Execute permission set on the home directory (/home/azureadmin) of user azureadmin
+<p style='color: green;'>6.2.7 The home directory (/root) of user root is NOT owned by root.
+<p style='color: red;'>6.2.7 The home directory (/run/dbus) of user messagebus is owned by root.
+<p style='color: red;'>6.2.7 The home directory (/) of user systemd-network is owned by root.
+<p style='color: red;'>6.2.7 The home directory (/) of user systemd-timesync is owned by root.
+<p style='color: green;'>6.2.7 The home directory (/var/spool/atjobs) of user at is NOT owned by at.
+<p style='color: green;'>6.2.7 The home directory (/var/lib/nobody) of user nobody is NOT owned by nobody.
+<p style='color: red;'>6.2.7 The home directory (/var/lib/empty) of user man is owned by root.
+<p style='color: green;'>6.2.7 The home directory (/var/spool/clientmqueue) of user mail is NOT owned by mail.
+<p style='color: green;'>6.2.7 The home directory (/var/spool/lpd) of user lp is NOT owned by lp.
+<p style='color: green;'>6.2.7 The home directory (/var/lib/chrony) of user chrony is NOT owned by chrony.
+<p style='color: red;'>6.2.7 The home directory (/var/lib/sshd) of user sshd is owned by root.
+<p style='color: red;'>6.2.7 The home directory (/) of user dockremap is owned by root.
+<p style='color: green;'>6.2.7 The home directory (/home/azureadmin) of user azureadmin is NOT owned by azureadmin.
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /root/.bash_history
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /root/.bash_history
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /root/.lesshst
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /root/.lesshst
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /root/.viminfo
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /root/.viminfo
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /var/spool/atjobs/.SEQ
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /var/spool/atjobs/.SEQ
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /home/azureadmin/.bash_history
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /home/azureadmin/.bash_history
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /home/azureadmin/.bashrc
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /home/azureadmin/.bashrc
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /home/azureadmin/.emacs
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /home/azureadmin/.emacs
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /home/azureadmin/.inputrc
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /home/azureadmin/.inputrc
+<p style='color: green;'>6.2.8 Group Write permission NOT set on file /home/azureadmin/.profile
+<p style='color: green;'>6.2.8 Other Write permission NOT set on file /home/azureadmin/.profile
+<p style='color: green;'>6.2.9 .forward file //.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file //.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /var/spool/atjobs/.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /var/lib/nobody/.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /var/lib/empty/.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /var/spool/clientmqueue/.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /var/spool/lpd/.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /var/lib/chrony/.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /var/lib/sshd/.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file //.forward NOT exists
+<p style='color: green;'>6.2.9 .forward file /home/azureadmin/.forward NOT exists
+<p style='color: green;'>6.2.10 .netrc file //.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file //.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /var/spool/atjobs/.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /var/lib/nobody/.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /var/lib/empty/.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /var/spool/clientmqueue/.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /var/spool/lpd/.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /var/lib/chrony/.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /var/lib/sshd/.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file //.netrc NOT exists
+<p style='color: green;'>6.2.10 .netrc file /home/azureadmin/.netrc NOT exists
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /var/spool/atjobs
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /var/lib/nobody
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /var/lib/empty
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /var/spool/clientmqueue
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /var/spool/lpd
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /var/lib/chrony
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /var/lib/sshd
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /
+<p style='color: green;'>6.2.12 .rhosts file NOT exist in /home/azureadmin
+
+ 6.2.13 Ensure all groups in /etc/passwd exist in /etc/group
+<p style='color: green;'>6.2.13 Group 0 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 100 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 25 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 474 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 476 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 477 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 478 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 480 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 481 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 487 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 495 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 496 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 499 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 62 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 65533 is referenced by /etc/passwd but does exist in /etc/group
+<p style='color: green;'>6.2.13 Group 65534 is referenced by /etc/passwd but does exist in /etc/group
+
+ 6.2.14 Ensure no duplicate  UIDs exis
+<p style='color: green;'>6.2.14 Duplicate UID (0):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (13):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (25):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (486):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (487):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (488):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (489):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (490):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (491):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (492):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (493):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (494):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (495):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (496):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (499):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (1000):  not present
+<p style='color: green;'>6.2.14 Duplicate UID (65534):  not present
+
+ 6.2.15 Ensure no duplicate  GIDs exis
+
+ 6.2.16 Ensure no duplicate user names exist
+<p style='color: green;'>Duplicate login names do not exist in /etc/passwd
+
+ 6.2.17 Ensure no duplicate group names exist 
+<p style='color: green;'>Duplicate group names do not exist in /etc/passwd
+
+ 6.2.18 Ensure shadow group is empty 
+<p style='color: green;'>6.2.18 shadow group is empty in /etc/passwd </p>
+<p style='color: green;'>-------------------------------------End of  CIS 6.0-----------------------------------------------------------</p>
+<p style='color: green;'> Version of the validation OS Shell script file name CIS_6_0.sh is 1.0 and latest version date is 13-02-2024 </p>
